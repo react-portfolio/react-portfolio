@@ -5,7 +5,7 @@ export default class Header extends Component {
     return (
 		<div className="navbar navbar-fixed-top" role="navigation" >
           <nav className="navbar-inner header">
-
+            
             <div className="container">
               <div className="navbar-brand">
                 <a href="#" > YOUR NAME HERE </a>
@@ -13,17 +13,27 @@ export default class Header extends Component {
               <ul className="nav navbar-nav pull-right">
                 <li>
                   <a href="#" className="navbar-brand">
-                    GITHUB
+                    Resume 
                   </a>
                 </li>
                 <li>
                   <a href="#" className="navbar-brand">
-                    LINKEDIN
+                    Contact
                   </a>
                 </li>
                 <li>
                   <a href="#" className="navbar-brand">
-                    EMAIL
+                    <i className="fa fa-github"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="navbar-brand">
+                    <i className="fa fa-linkedin-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="navbar-brand">
+                    <i className="fa fa-angellist"></i>
                   </a>
                 </li>
                 </ul>

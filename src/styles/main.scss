@@ -28,8 +28,9 @@ body {
 
 .main-app-nav {
   font-size: 2em;
-  text-align: center;
+  text-align: left;
 }
+
 
 .project-container {
   position: relative;
@@ -43,7 +44,7 @@ body {
 .screenshot-container {
   background-color: $accent-red;
   margin-right: 6vw;
-  height: 50vh;
+  height: 42vh;
   width: 38vw;
 }
 
@@ -75,12 +76,13 @@ body {
     .circ-button {
       background: $color-snow;
       border: solid 2px #3b3b3b;
-      width: 23px;
-      height: 23px;
+      width: 3vh;
+      height: 3vh;
       position: relative;
       margin: 0 auto;
       border-radius: 50%;
       top: 30px;
+      margin-top: .5vh;
       cursor: pointer;
     }
   
@@ -120,12 +122,12 @@ body {
 }
 
 .project-info {
-  padding: 2vh;
-  background-color: $accent-blue;
+  padding: 0 2vh 2vh 2vh;
+  background-color: $color-snow;
 }
 
 .github-info {
-  margin: 2vh;
+  margin: 5vh;
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -134,7 +136,7 @@ body {
 footer {
   font-size: 0.75em;
   text-align: center;
-  padding-top: 10em;
+  padding-top: 5vh;
 
   a {
     text-decoration: none;
@@ -155,8 +157,8 @@ footer {
   /* remove the gradient */
   background-image: none !important;
   box-shadow: 0 8px 6px -6px rgba(0,0,0, .2);
-  height: 70px;
-  padding-top: 10px;
+  height: 45px;
+  padding-top: 0px;
 }
 
 .header a {
@@ -166,5 +168,10 @@ footer {
 
 ul.nav{
   display:inline-flex;
+}
+
+.icon {
+  height: 18px;
+  width: auto;
 }
 

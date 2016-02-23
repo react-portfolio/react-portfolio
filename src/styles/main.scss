@@ -42,28 +42,32 @@ body {
 
 .screenshot-container {
   background-color: $accent-red;
+  margin-right: 6vw;
   height: 50vh;
-  width: 50vw;
+  width: 38vw;
 }
 
 .iphone {
   background: $color-snow;
   border: solid 2px $color-silver;
-  height: 500em;
-  width: 260em;
-  border-radius: 30em;
-  position: absolute;
+  height: 48vh;
+  width: 25vh;
+  border-radius: 24px;
   margin: 0 auto;
-  box-shadow: 0 3em 5em 0 rgba(50, 50, 50, 0.25);
+  box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.25);
   @include transition(all .4s $ease-in-circ);
+
+  position: absolute;
+  bottom: 5vh;
+  left: 33vw;
 }
 
 .iphone-inner {
   background: $color-snow;
   border: solid 2px $color-silver-dark;
-  height: 496px;
-  width: 256px;
-  border-radius: 30px;
+  height: 48vh;
+  width: 24vh;
+  border-radius: 24px;
   position: relative;
   margin: 0 auto;
   box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.75);
@@ -71,64 +75,57 @@ body {
     .circ-button {
       background: $color-snow;
       border: solid 2px #3b3b3b;
-      width: 36px;
-      height: 36px;
+      width: 23px;
+      height: 23px;
       position: relative;
       margin: 0 auto;
       border-radius: 50%;
-      top: 48px;
+      top: 30px;
       cursor: pointer;
     }
   
-  .small-top-circ {
-    @include linear-gradient(#1f1f1f, #141414);
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    top: 6px;
-    position: relative;
-    margin: 0 auto;
-  }
-  
   .camera {
     @include linear-gradient(#1f1f1f, #141414);
-    position: absolute;
-    width: 8px;
-    height: 8px;
+    position: relative;
+    width: 1vh;
+    height: 1vh;
     border-radius: 50%;
     border: solid 1px $color-silver;
-    top: 17px;
-    left: 85px;
+    top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .oval {
     @include linear-gradient(#1f1f1f, #141414);
-    width: 50px;
-    height: 4px;
-    top: 14px;
+    width: 32px;
+    height: 3px;
+    top: 11px;
     border-radius: 2px;
     margin: 0 auto;
-    margin-bottom: -12px;
+    margin-bottom: -9.6px;
     position: relative;
   }
 }
 
 .screen {
   position: relative;
-  width: 230px;
-  height: 400px;
+  width: 22vh;
+  height: 38vh;
   margin: 0 auto;
-  top: 40px;
+  top: 4vh;
   overflow: hidden;
   @include linear-gradient(#1f1f1f, #141414);
   border: solid 2px #3b3b3b;@include transition(all .4s $ease-in-circ);
 }
 
 .project-info {
+  padding: 2vh;
   background-color: $accent-blue;
 }
 
 .github-info {
+  margin: 2vh;
   position: absolute;
   bottom: 0px;
   left: 0px;

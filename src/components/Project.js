@@ -7,18 +7,39 @@ export default class Project extends Component {
   }
 
   render() {
+    const { project } = this.props;
+
+    const desktop_url = "'" + project.desktop_image + "'";
+
     return (
       <div className="project-container">
-        <div className="screenshot-container">
-          Screenshot
+
+        <div className="image-container" >
+          <div className="screenshot-container">
+            <img src={desktop_url}/>
+          </div>
+
+          <Mobile image={project.mobile_image}/>
+
         </div>
-        <Mobile />
+
         <div className="project-info">
-          Info
+
+          <h2>{project.title}</h2>
+          <div>{project.project_url}</div>
+          <div>{project.date}</div>
+          <h4>Background</h4>
+          <div>{project.background}</div>
+          <h4>Role</h4>
+          <div>{project.role}</div>
+          <h4>Tech Stack</h4>
+          <div>{project.tech_stack}</div>
+
         </div>
 
         <div className="github-info">
-          Github
+          <img src="../data/logos/github-logo.png"/>
+          <div> {project.github_url} </div>
         </div>
 
       </div>
@@ -27,5 +48,5 @@ export default class Project extends Component {
 }
 
 Project.propTypes = {
-  actions: PropTypes.object.isRequired
+  project: PropTypes.object.isRequired
 };

@@ -6,8 +6,8 @@ const projectsData = {
     date: 'year',
     github_url: 'url',
     project_url: 'url',
-    background: 'background',
-    role: 'role',
+    background: 'ba;waibubackground iaberli;bj;bj;bj;bj;a;waibubackground iaberli;bj;bj;ba;waibubackground iaberli;bj;bj;bj;bj;bj;bj;bbj',
+    role: 'role background iaberliubliabuole background iaberliubliole background iaberliubliabu;iababu;iab;iabu',
     tech_stack: 'tech_stack'
   }]
 };

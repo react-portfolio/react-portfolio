@@ -6,6 +6,8 @@ export default class Mobile extends Component {
   }
 
   render() {
+    const mobileImage = "'" + this.props + "'";
+
     return (
       <div className="mobile-container">
         <div className="iphone">
@@ -16,20 +18,16 @@ export default class Mobile extends Component {
             <div className="screen">
               <div className="usman">
               </div>
+              <img src={mobileImage}/>
             </div>
             <div className="circ-button"></div>
           </div>
         </div>
-
-        <div className="mobile-screenshot">
-          Mobile
-        </div>
-
       </div>
     );
   }
 }
 
 Mobile.propTypes = {
-  actions: PropTypes.object.isRequired
+  mobile_image: PropTypes.string.isRequired
 };

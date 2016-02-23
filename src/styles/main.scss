@@ -32,6 +32,8 @@ body {
 }
 
 .project-container {
+  position: relative;
+  display: flex;
   background-color: $accent-gray;
   height: 70vh;
   width: 80vw;
@@ -50,7 +52,7 @@ body {
   height: 500px;
   width: 260px;
   border-radius: 30px;
-  position: relative;
+  position: absolute;
   margin: 0 auto;
   box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.25);
   @include transition(all .4s $ease-in-circ);
@@ -122,6 +124,15 @@ body {
   border: solid 2px #3b3b3b;@include transition(all .4s $ease-in-circ);
 }
 
+.project-info {
+  background-color: $accent-blue;
+}
+
+.github-info {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
 
 footer {
   font-size: 0.75em;

@@ -59,7 +59,7 @@ body {
   @include transition(all .4s $ease-in-circ);
 
   position: absolute;
-  bottom: 5vh;
+  bottom: 6vh;
   left: 33vw;
 }
 
@@ -170,7 +170,7 @@ ul.nav{
   display:inline-flex;
 }
 
-.icon {
+.footer_icon {
   height: 18px;
   width: auto;
 }

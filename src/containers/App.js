@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as CounterActions from '../actions/CounterActions';
 import Counter from '../components/Counter';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 /**
  * It is common practice to have a 'Root' container/component require our main App (this one).
@@ -16,6 +17,7 @@ export default class App extends Component {
     const { counter, actions } = this.props;
     return (
       <div className="main-app-container">
+        <Header />
         <div className="main-app-nav">Simple Redux Boilerplate</div>
         {/* notice that we then pass those unpacked props into the Counter component */}
         <Counter counter={counter} actions={actions} />

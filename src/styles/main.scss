@@ -25,11 +25,11 @@ body {
 }
 
 .main-app-container {
-  padding-top: 2em;
+  padding-top: 2rem;
 }
 
 .main-app-nav {
-  font-size: 2em;
+  font-size: 2rem;
   text-align: left;
 }
 
@@ -202,4 +202,15 @@ ul.nav{
 
 .tech_icon {
   height: 1em;
+}
+
+.statistics {
+  background-color: $accent-gray;
+  width: 80vw;
+  padding: 1vh 1vw 1vh 1vw; 
+}
+
+.introduction {
+  height: 40vh;
+  background-color: $accent-gray;
 }

@@ -1,10 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as CounterActions from '../actions/CounterActions';
+import * as BenchmarkActions from '../actions/BenchmarkActions';
 import Project from '../components/Project';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Statistics from '../components/Statistics';
+import Introduction from '../components/Introduction';
+import { Perf } from '../index';
 
 /**
  * It is common practice to have a 'Root' container/component require our main App (this one).
@@ -12,17 +15,31 @@ import Header from '../components/Header';
  * component to make the Redux store available to the rest of the app.
  */
 export default class App extends Component {
+  componentDidMount() {
+    const { actions } = this.props;
+    Perf.stop();
+    Perf.printInclusive();
+
+    const inclusiveMeasurements = Perf.getLastMeasurements()[0].inclusive;
+    const inclusiveMeasurementsKeys = Object.keys(inclusiveMeasurements);
+    let sum = 0;
+
+    for (let i = 0; i < inclusiveMeasurementsKeys.length; i++) {
+      sum += inclusiveMeasurements[inclusiveMeasurementsKeys[i]];
+    }
+    actions.updateBenchmark(Math.floor(sum));
+  }
+
   render() {
-    const { counter, actions, projects } = this.props;
-    
-    let projectEntries = projects.map((project, index) => {
+    const { projects, benchmark } = this.props;
+    const projectEntries = projects.map((project, index) => {
       return <Project key={index} project={project} />;
     });
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
       <div className="main-app-container">
-        
         <Header />
+        <Statistics benchmark={benchmark} />
         <div className="main-app-nav">Selected Projects</div>
         {/* notice that we then pass those unpacked props into the Counter component */}
           {projectEntries}
@@ -34,7 +51,8 @@ export default class App extends Component {
 
 App.propTypes = {
   projects: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
+  actions: PropTypes.object.isRequired,
+  benchmark: PropTypes.number.isRequired
 };
 
 /**
@@ -44,7 +62,8 @@ App.propTypes = {
  */
 function mapStateToProps(state) {
   return {
-    projects: state.projects
+    projects: state.projects,
+    benchmark: state.benchmark
   };
 }
 
@@ -58,7 +77,7 @@ function mapStateToProps(state) {
  */
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(CounterActions, dispatch)
+    actions: bindActionCreators(BenchmarkActions, dispatch)
   };
 }
 

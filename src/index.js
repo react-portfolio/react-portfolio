@@ -13,6 +13,11 @@ import './styles/main.scss';
 import { configureStore } from './store/configureStore';
 import { Root } from './containers/Root';
 
+import Perf from 'react-addons-perf';
+export { Perf };
+
+Perf.start();
+
 const store = configureStore();
 
 ReactDOM.render(

@@ -12,12 +12,11 @@ import Header from '../components/Header';
  * component to make the Redux store available to the rest of the app.
  */
 export default class App extends Component {
-  
   render() {
     const { counter, actions, projects } = this.props;
     
     let projectEntries = projects.map((project, index) => {
-      return <Project key={index} project={project}/>
+      return <Project key={index} project={project} />;
     });
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
@@ -34,7 +33,7 @@ export default class App extends Component {
 }
 
 App.propTypes = {
-  projects: PropTypes.object.isRequired,
+  projects: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired
 };
 

@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Mobile from './projectComponents/Mobile.js';
+import TechStackItem from './projectComponents/TechStackItem';
 
 export default class Project extends Component {
   constructor(props, context) {
@@ -8,8 +9,11 @@ export default class Project extends Component {
 
   render() {
     const { project } = this.props;
-
     const desktop_url = "'" + project.desktop_image + "'";
+    
+    const techStackItems = project.tech_stack.map((tech, index) => {
+      return <TechStackItem key={index} tech={tech}/>;
+    });
 
     return (
       <div className="project-container">
@@ -32,7 +36,7 @@ export default class Project extends Component {
           <h4>Role</h4>
           <div>{project.role}</div>
           <h4>Tech Stack</h4>
-          <div>{project.tech_stack}</div>
+          <div>{techStackItems}</div>
 
         </div>
 

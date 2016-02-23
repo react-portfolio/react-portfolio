@@ -187,13 +187,18 @@ ul.nav{
 
 .icon {
   font-size: 1.4em;
-
 }
 
 .nav > li > a:focus,
-.nav > li > a:hover
-{
+.nav > li > a:hover {
   text-decoration: none;
   background-color: transparent;
 }
 
+.footer_icon {
+  height: 18px;
+  width: auto;
+}
+
+.tech_icon {
+  height: 1em;

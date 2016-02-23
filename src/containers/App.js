@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as CounterActions from '../actions/CounterActions';
-import Counter from '../components/Counter';
+import Project from '../components/Project';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
@@ -20,7 +20,7 @@ export default class App extends Component {
         <Header />
         <div className="main-app-nav">Simple Redux Boilerplate</div>
         {/* notice that we then pass those unpacked props into the Counter component */}
-        <Counter counter={counter} actions={actions} />
+        <Project actions={actions} />
         <Footer />
       </div>
     );

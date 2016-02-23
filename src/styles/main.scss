@@ -31,6 +31,22 @@ body {
   text-align: left;
 }
 
+.project-list {
+  list-style: none;
+}
+
+.project-list-item {
+  display: inline-block;
+  margin: 12px;
+  padding: 4px;
+}
+
+.project-link-image {
+  width: 8vw;
+  height: 8vw;
+  background-size: cover;
+  border-radius: 3px;
+}
 
 .project-container {
   position: relative;
@@ -46,6 +62,7 @@ body {
   margin-right: 6vw;
   height: 42vh;
   width: 38vw;
+  background-size: cover;
 }
 
 .iphone {
@@ -175,3 +192,29 @@ ul.nav{
   width: auto;
 }
 
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 0;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0;
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}

@@ -44,7 +44,7 @@ module.exports = {
         include: path.join(__dirname, 'src')
       },
       {
-        test: /\.scss$/,
+        test: /(\.scss$|\.css$)/,
         loader: 'style!css!sass?includePaths[]=' + bourbon
       }
     ]

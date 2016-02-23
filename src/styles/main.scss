@@ -49,12 +49,12 @@ body {
 .iphone {
   background: $color-snow;
   border: solid 2px $color-silver;
-  height: 500px;
-  width: 260px;
-  border-radius: 30px;
+  height: 500em;
+  width: 260em;
+  border-radius: 30em;
   position: absolute;
   margin: 0 auto;
-  box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.25);
+  box-shadow: 0 3em 5em 0 rgba(50, 50, 50, 0.25);
   @include transition(all .4s $ease-in-circ);
 }
 

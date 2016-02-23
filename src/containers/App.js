@@ -22,8 +22,9 @@ export default class App extends Component {
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
       <div className="main-app-container">
+        
         <Header />
-        <div className="main-app-nav">Simple Redux Boilerplate</div>
+        <div className="main-app-nav">Selected Projects</div>
         {/* notice that we then pass those unpacked props into the Counter component */}
           {projectEntries}
         <Footer />

@@ -249,3 +249,29 @@ ul.nav{
   transition: opacity .5s ease-in;
 }
 
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 0;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0;
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}

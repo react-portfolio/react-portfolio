@@ -4,42 +4,41 @@ import { Link } from 'react-router';
 export default class Header extends Component {
   render() {
     return (
-		<div className="navbar navbar-fixed-top" role="navigation" >
-          <nav className="navbar-inner header">
+          <nav className="navbar navbar-fixed-top navbar-inner header">
+
             <div className="container">
-              <div className="navbar-brand">
-                <Link to="/">Rachel RoseFigura</Link>
+              <div className="navbar-brand pull-left">
+                <Link to="/">John Brogrammer</Link>
               </div>
               <ul className="nav navbar-nav pull-right">
                 <li>
-                  <a href="#" className="navbar-brand">
-                    Resume
+                  <a href="#" className="nav-link">
+                    <span className="hide-when-small">Resume</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="navbar-brand">
-                    Contact
+                  <a href="#" className="nav-link">
+                    <i className="fa fa-envelope icon"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="navbar-brand">
-                    <i className="fa fa-github"></i>
+                  <a href="#" className="nav-link">
+                    <i className="fa fa-github icon"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="navbar-brand">
-                    <i className="fa fa-linkedin-square"></i>
+                  <a href="#" className="nav-link">
+                    <i className="fa fa-linkedin-square icon"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="navbar-brand">
-                    <i className="fa fa-angellist"></i>
+                  <a href="#" className="nav-link">
+                    <i className="fa fa-angellist icon"></i>
                   </a>
                 </li>
                 </ul>
             </div>
             </nav>
-		</div>
     );
   }
 }

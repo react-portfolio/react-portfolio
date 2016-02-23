@@ -12,6 +12,8 @@ $color-snow: #fff;
 $color-silver: #c5c5c5;
 $color-silver-dark: #b4b4b4;
 
+$gray-header: #7F7F7F;
+
 
 body {
   background-color: $main-bg-color;
@@ -102,7 +104,7 @@ body {
       margin-top: .5vh;
       cursor: pointer;
     }
-  
+
   .camera {
     @include linear-gradient(#1f1f1f, #141414);
     position: relative;
@@ -114,7 +116,7 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .oval {
     @include linear-gradient(#1f1f1f, #141414);
     width: 32px;
@@ -174,22 +176,48 @@ footer {
   /* remove the gradient */
   background-image: none !important;
   box-shadow: 0 8px 6px -6px rgba(0,0,0, .2);
-  height: 45px;
-  padding-top: 0px;
+  padding-top: 10px;
 }
 
 .header a {
-  color: #7F7F7F;
+  color: $gray-header;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 1.1em;
+  margin-top: -5px;
 }
 
 ul.nav{
   display:inline-flex;
 }
 
+
 .footer_icon {
   height: 18px;
   width: auto;
+}
+
+.nav-link{
+  border-top: 4px solid transparent;
+  transition: border-top .3s;
+  &:hover{border-top: 4px solid dodgerblue;}
+}
+
+.hide-when-small {
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.icon {
+  font-size: 1.4em;
+
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover
+{
+  text-decoration: none;
+  background-color: transparent;
 }
 
 

@@ -30,7 +30,7 @@ export default class Home extends Component {
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
         <div>
-          <h1>Hello I am Rachel</h1>
+          <h1>Hello I am John</h1>
           <p>Here is some info about me</p>
           <div>
             <div className="main-app-nav">Selected Projects</div>

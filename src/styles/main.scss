@@ -13,6 +13,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: 'Raleway', sans-serif;
+  margin-top: 65px;
 }
 
 .main-app-container {
@@ -78,3 +79,22 @@ footer {
     color: $accent-red;
   }
 }
+
+.header {
+  background-color: rgba(255,255,255, .55);
+  /* remove the gradient */
+  background-image: none !important;
+  box-shadow: 0 8px 6px -6px rgba(0,0,0, .2);
+  height: 70px;
+  padding-top: 10px;
+}
+
+.header a {
+  color: #7F7F7F;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+ul.nav{
+  display:inline-flex;
+}
+

@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as CounterActions from '../actions/CounterActions';
-import Counter from '../components/Counter';
+import Project from '../components/Project';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
@@ -12,15 +12,20 @@ import Header from '../components/Header';
  * component to make the Redux store available to the rest of the app.
  */
 export default class App extends Component {
+  
   render() {
+    const { counter, actions, projects } = this.props;
+    
+    let projectEntries = projects.map((project, index) => {
+      return <Project key={index} project={project}/>
+    });
     // we can use ES6's object destructuring to effectively 'unpack' our props
-    const { counter, actions } = this.props;
     return (
       <div className="main-app-container">
         <Header />
         <div className="main-app-nav">Simple Redux Boilerplate</div>
         {/* notice that we then pass those unpacked props into the Counter component */}
-        <Counter counter={counter} actions={actions} />
+          {projectEntries}
         <Footer />
       </div>
     );
@@ -28,7 +33,7 @@ export default class App extends Component {
 }
 
 App.propTypes = {
-  counter: PropTypes.number.isRequired,
+  projects: PropTypes.object.isRequired,
   actions: PropTypes.object.isRequired
 };
 
@@ -39,7 +44,7 @@ App.propTypes = {
  */
 function mapStateToProps(state) {
   return {
-    counter: state.counter
+    projects: state.projects
   };
 }
 

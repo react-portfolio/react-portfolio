@@ -7,6 +7,12 @@ $accent-black: #35342f;
 $accent-orange: #ec6b2d;
 $accent-red: #dd6464;
 
+@import "bourbon";
+$color-snow: #fff;
+$color-silver: #c5c5c5;
+$color-silver-dark: #b4b4b4;
+
+
 body {
   background-color: $main-bg-color;
   color: $accent-black;
@@ -25,40 +31,107 @@ body {
   text-align: center;
 }
 
-.counter-num-label {
-  color: $accent-orange;
-  padding-top: 1em;
-  font-size: 3em;
-  text-align: center;
-  width: 100%;
-}
-
-.counter-even-label {
-  padding-top: 1em;
-  font-size: 0.75em;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.counter-buttons {
+.project-container {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3em;
+  background-color: $accent-gray;
+  height: 70vh;
+  width: 80vw;
+  padding: 5vh 5vw 5vh 5vw;
+}
 
-  button {
-    background-color: #CCC;
-    border: none;
-    height: 30px;
-    width: 80px;
-    margin-left: 1em;
-    margin-right: 1em;
+.screenshot-container {
+  background-color: $accent-red;
+  height: 50vh;
+  width: 50vw;
+}
 
-    &:hover {
-      background-color: $accent-gray;
+.iphone {
+  background: $color-snow;
+  border: solid 2px $color-silver;
+  height: 500em;
+  width: 260em;
+  border-radius: 30em;
+  position: absolute;
+  margin: 0 auto;
+  box-shadow: 0 3em 5em 0 rgba(50, 50, 50, 0.25);
+  @include transition(all .4s $ease-in-circ);
+}
+
+.iphone-inner {
+  background: $color-snow;
+  border: solid 2px $color-silver-dark;
+  height: 496px;
+  width: 256px;
+  border-radius: 30px;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.75);
+  @include transition(all .4s $ease-in-circ);
+    .circ-button {
+      background: $color-snow;
+      border: solid 2px #3b3b3b;
+      width: 36px;
+      height: 36px;
+      position: relative;
+      margin: 0 auto;
+      border-radius: 50%;
+      top: 48px;
+      cursor: pointer;
     }
+  
+  .small-top-circ {
+    @include linear-gradient(#1f1f1f, #141414);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 6px;
+    position: relative;
+    margin: 0 auto;
   }
+  
+  .camera {
+    @include linear-gradient(#1f1f1f, #141414);
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: solid 1px $color-silver;
+    top: 17px;
+    left: 85px;
+  }
+  
+  .oval {
+    @include linear-gradient(#1f1f1f, #141414);
+    width: 50px;
+    height: 4px;
+    top: 14px;
+    border-radius: 2px;
+    margin: 0 auto;
+    margin-bottom: -12px;
+    position: relative;
+  }
+}
+
+.screen {
+  position: relative;
+  width: 230px;
+  height: 400px;
+  margin: 0 auto;
+  top: 40px;
+  overflow: hidden;
+  @include linear-gradient(#1f1f1f, #141414);
+  border: solid 2px #3b3b3b;@include transition(all .4s $ease-in-circ);
+}
+
+.project-info {
+  background-color: $accent-blue;
+}
+
+.github-info {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
 }
 
 footer {

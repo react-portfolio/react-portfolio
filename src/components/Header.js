@@ -12,7 +12,7 @@ export default class Header extends Component {
               </div>
               <ul className="nav navbar-nav pull-right">
                 <li>
-                  <a href={personalInfo.resume} className="nav-link" target="_blank">
+                  <a href={personalInfo.resume} className="nav-link" target="_blank" style={{ lineHeight: 'normal' }}>
                     <span>Resume</span>
                   </a>
                 </li>

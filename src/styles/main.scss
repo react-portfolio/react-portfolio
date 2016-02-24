@@ -1,26 +1,33 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,400);
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 
-$main-bg-color: #f1f2f0;
+$main-bg-color: #faf1d5;
 $accent-blue: #37bbe4;
 $accent-gray: #e1e0dd;
 $accent-black: #35342f;
 $accent-orange: #ec6b2d;
 $accent-red: #dd6464;
+$project-container-color: #ece9df;
 
 @import "bourbon";
 $color-snow: #fff;
 $color-silver: #c5c5c5;
 $color-silver-dark: #b4b4b4;
 
-$gray-header: #7F7F7F;
+$header-text-color: white;
+$header-background-color: rgba(17,40,45, 0.9);
 
+$statistics-background-color: $color-snow;
+$statistics-color: $accent-black;
 
 body {
-  background-color: $main-bg-color;
+  background: $main-bg-color;    
   color: $accent-black;
   display: flex;
   justify-content: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
   margin-top: 65px;
   @media only screen and (max-device-width: 600px) {
@@ -55,23 +62,36 @@ h3 {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: $accent-gray;
+  background-color: $project-container-color;
   height: auto;
   width: 80vw;
   padding: 5vh 5vw 5vh 5vw;
   margin-bottom: 4vh;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 .screenshot-container {
   margin-right: 4vw;
   height: auto;
   width: 100%;
+  background-color: rgba(0,0,0,0);
 }
 
 .screenshot-container img {
   width: 100%;
   margin-bottom: 2em;
   position: relative;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.screenshot-container div {
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 .iphone {
@@ -81,7 +101,7 @@ h3 {
   width: 25vh;
   border-radius: 24px;
   margin: 0 auto;
-  box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.25);
+  box-shadow: 0 10px 10px 2px rgba(50, 50, 50, 0.75);
   @include transition(all .4s $ease-in-circ);
   position: absolute;
   right: 2em;
@@ -191,7 +211,7 @@ footer {
 }
 
 .header {
-  background-color: rgba(255,255,255, .55);
+  background-color: $header-background-color;
   /* remove the gradient */
   background-image: none !important;
   box-shadow: 0 8px 6px -6px rgba(0,0,0, .2);
@@ -199,8 +219,8 @@ footer {
 }
 
 .header a {
-  color: $gray-header;
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  color: $header-text-color;
+  font-family: Roboto Slab, sans-serif;
   font-size: 1.1em;
   margin-top: -5px;
 }
@@ -252,7 +272,8 @@ ul.nav{
 }
 
 .statistics {
-  background-color: $accent-gray;
+  background-color: $statistics-background-color;
+  color: $statistics-color;
   width: 80vw;
   padding: 1vh 1vw 1vh 1vw; 
   margin-bottom: 2em;
@@ -264,6 +285,7 @@ ul.nav{
 }
 
 .navbar-brand {
+  line-height: normal;
   @media only screen and (max-device-width: 600px) {
     font-size: 3rem;
   } 

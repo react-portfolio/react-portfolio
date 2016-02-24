@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import counter from './counter';
 import projects from './projects';
 import benchmark from './benchmark';
+import personalInfo from './personalInfo';
 
 /**
  * combineReducers is important to understand. As your app might grow in size
@@ -19,7 +20,8 @@ import benchmark from './benchmark';
 const rootReducer = combineReducers({
   counter, // you might be used to: counter: counter,
   projects,
-  benchmark
+  benchmark,
+  personalInfo
 });
 
 export default rootReducer;

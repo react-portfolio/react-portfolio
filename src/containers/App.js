@@ -31,19 +31,19 @@ export default class App extends Component {
   }
 
   render() {
-    const { projects, benchmark } = this.props;
+    const { projects, benchmark, personalInfo } = this.props;
     const projectEntries = projects.map((project, index) => {
       return <Project key={index} project={project} />;
     });
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
       <div className="main-app-container">
-        <Header />
+        <Header personalInfo={personalInfo} />
         <Statistics benchmark={benchmark} />
         <div className="main-app-nav">Selected Projects</div>
         {/* notice that we then pass those unpacked props into the Counter component */}
           {projectEntries}
-        <Footer />
+        <Footer personalInfo={personalInfo} />
       </div>
     );
   }
@@ -52,7 +52,8 @@ export default class App extends Component {
 App.propTypes = {
   projects: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired,
-  benchmark: PropTypes.number.isRequired
+  benchmark: PropTypes.number.isRequired,
+  personalInfo: PropTypes.object.isRequired
 };
 
 /**
@@ -63,7 +64,8 @@ App.propTypes = {
 function mapStateToProps(state) {
   return {
     projects: state.projects,
-    benchmark: state.benchmark
+    benchmark: state.benchmark,
+    personalInfo: state.personalInfo
   };
 }
 

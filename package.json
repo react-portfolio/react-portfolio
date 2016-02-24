@@ -32,6 +32,7 @@
     "eslint-plugin-react": "^3.16.1",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.13.3",
+    "image-webpack-loader": "^1.6.3",
     "node-sass": "^3.4.2",
     "redux-devtools": "^3.0.1",
     "redux-devtools-dock-monitor": "^1.0.1",

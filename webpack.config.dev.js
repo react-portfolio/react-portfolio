@@ -46,6 +46,10 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: 'style!css!sass?includePaths[]=' + bourbon
+      },
+      { 
+        test: /\.(png|jpg|gif)$/,
+        loader: 'file?name=[name].[ext]'
       }
     ]
   }

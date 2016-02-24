@@ -21,7 +21,11 @@ body {
   display: flex;
   justify-content: center;
   font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
   margin-top: 65px;
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
 }
 
 .main-app-container {
@@ -41,11 +45,15 @@ body {
   height: 70vh;
   width: 80vw;
   padding: 5vh 5vw 5vh 5vw;
+  @media screen and (max-width: 800px) {
+    display: inline;
+    padding: 0 0 0 0;
+  }
 }
 
 .screenshot-container {
   background-color: $accent-red;
-  margin-right: 6vw;
+  margin-right: 4vw;
   height: 42vh;
   width: 38vw;
 }
@@ -126,6 +134,8 @@ body {
 .project-info {
   padding: 0 2vh 2vh 2vh;
   background-color: $color-snow;
+  flex: 0 2 auto;
+  height: 100%;
 }
 
 .github-info {
@@ -180,20 +190,37 @@ ul.nav{
 }
 
 .hide-when-small {
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     display: none;
   }
 }
 
 .icon {
   font-size: 1.4em;
-
 }
 
 .nav > li > a:focus,
-.nav > li > a:hover
-{
+.nav > li > a:hover {
   text-decoration: none;
   background-color: transparent;
 }
 
+.footer_icon {
+  height: 18px;
+  width: auto;
+}
+
+.tech_icon {
+  height: 1em;
+}
+
+.statistics {
+  background-color: $accent-gray;
+  width: 80vw;
+  padding: 1vh 1vw 1vh 1vw; 
+}
+
+.introduction {
+  height: 40vh;
+  background-color: $accent-gray;
+}

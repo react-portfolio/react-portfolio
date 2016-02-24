@@ -6,7 +6,7 @@ export default class Footer extends Component {
     return (
       <footer>
         <span id="footer-text-wrap">
-        Architected in SF <img className="icon" src="http://i.imgur.com/RwtepDc.png"/> by <a href="http://www.davidtsai.codes">Rachel RoseFigura</a>.
+        Architected in SF <img className="footer_icon" src="http://i.imgur.com/RwtepDc.png"/> by <a href="http://www.davidtsai.codes">Rachel RoseFigura</a>.
         </span>
       </footer>
     );

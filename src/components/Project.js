@@ -22,10 +22,10 @@ export default class Project extends Component {
           </div>
         </div>
         <div className="project-info">
-          <a href={project.project_url}>
+          <a href={project.project_url} target="_blank">
             <h2>{project.title}</h2>
           </a>
-          <a href={project.github_url}>
+          <a href={project.github_url} target="_blank">
             {project.github_url !== '' ? 'Github' : null}
           </a>
           <div>{project.date}</div>

@@ -12,7 +12,7 @@ export default class Header extends Component {
               </div>
               <ul className="nav navbar-nav pull-right">
                 <li>
-                  <a href={personalInfo.resume} className="nav-link">
+                  <a href={personalInfo.resume} className="nav-link" target="_blank">
                     <span>Resume</span>
                   </a>
                 </li>
@@ -22,17 +22,17 @@ export default class Header extends Component {
                   </a>
                 </li>
                 <li>
-                  <a href={personalInfo.github} className="nav-link">
+                  <a href={personalInfo.github} className="nav-link" target="_blank">
                     <i className="fa fa-github icon"></i>
                   </a>
                 </li>
                 <li>
-                  <a href={personalInfo.linkedIn} className="nav-link">
+                  <a href={personalInfo.linkedIn} className="nav-link" target="_blank">
                     <i className="fa fa-linkedin-square icon"></i>
                   </a>
                 </li>
                 <li>
-                  <a href={personalInfo.angelList} className="nav-link">
+                  <a href={personalInfo.angelList} className="nav-link" target="_blank">
                     <i className="fa fa-angellist icon"></i>
                   </a>
                 </li>

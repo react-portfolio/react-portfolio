@@ -242,10 +242,8 @@ ul.nav{
 .tech-icon-container {
   display: flex;
   font-size: 2rem;
-}
-
-.tech-icon-container div {
-  margin-right: 5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .tech-icon {

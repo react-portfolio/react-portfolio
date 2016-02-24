@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Mobile from './projectComponents/Mobile.js';
 import TechStackItem from './projectComponents/TechStackItem';
+import githubIcon from '../data/logos/github-logo.png';
 
 export default class Project extends Component {
   constructor(props, context) {
@@ -8,9 +9,7 @@ export default class Project extends Component {
   }
 
   render() {
-    const { project } = this.props;
-    const desktop_url = "'" + project.desktop_image + "'";
-    
+    const { project } = this.props;    
     const techStackItems = project.tech_stack.map((tech, index) => {
       return <TechStackItem key={index} tech={tech}/>;
     });
@@ -20,7 +19,7 @@ export default class Project extends Component {
 
         <div className="image-container" >
           <div className="screenshot-container">
-            <img src={desktop_url}/>
+            <img src={project.desktop_image}/>
           </div>
 
           <Mobile image={project.mobile_image}/>
@@ -41,7 +40,7 @@ export default class Project extends Component {
         </div>
 
         <div className="github-info">
-          <div> <img src="../data/logos/github-logo.png"/> {project.github_url} </div>
+          <div> <img src={githubIcon}/> {project.github_url} </div>
         </div>
 
       </div>

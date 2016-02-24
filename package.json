@@ -45,10 +45,12 @@
     "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
+    "file-loader": "^0.8.5",
     "node-bourbon": "^4.2.3",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.1.1",
-    "redux-thunk": "^1.0.3"
+    "redux-thunk": "^1.0.3",
+    "url-loader": "^0.5.7"
   }
 }

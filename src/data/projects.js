@@ -1,7 +1,9 @@
+import project1Url from './screenshots/project1.gif';
+
 const projectsData = {
   data: [
     {
-      desktop_image: 'image_url',
+      desktop_image: project1Url,
       mobile_image: 'image_url',
       title: 'title',
       date: 'year',

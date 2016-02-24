@@ -13,10 +13,8 @@ import './styles/main.scss';
 import { configureStore } from './store/configureStore';
 import { Root } from './containers/Root';
 
-import Perf from 'react-addons-perf';
-export { Perf };
-
-Perf.start();
+// Benchmark: Start keeping track of time
+export const startTime = new Date().getTime();
 
 const store = configureStore();
 

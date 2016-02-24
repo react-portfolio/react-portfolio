@@ -1,31 +1,51 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,400);
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 
-$main-bg-color: #f1f2f0;
+$main-bg-color: #faf1d5;
 $accent-blue: #37bbe4;
 $accent-gray: #e1e0dd;
 $accent-black: #35342f;
 $accent-orange: #ec6b2d;
 $accent-red: #dd6464;
+$project-container-color: #ece9df;
 
 @import "bourbon";
 $color-snow: #fff;
 $color-silver: #c5c5c5;
 $color-silver-dark: #b4b4b4;
 
-$gray-header: #7F7F7F;
+$header-text-color: white;
+$header-background-color: rgba(17,40,45, 0.9);
 
+$statistics-background-color: $color-snow;
+$statistics-color: $accent-black;
 
 body {
-  background-color: $main-bg-color;
+  background: $main-bg-color;    
   color: $accent-black;
   display: flex;
   justify-content: center;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.4rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
   margin-top: 65px;
-  @media screen and (max-width: 800px) {
-    font-size: 20px;
+  @media only screen and (max-device-width: 600px) {
+    font-size: 3rem;
   }
+}
+
+h2 {
+  @media only screen and (max-device-width: 600px) {
+    font-size: 5rem;
+  } 
+}
+
+
+h3 {
+  @media only screen and (max-device-width: 600px) {
+    font-size: 4rem;
+  } 
 }
 
 .main-app-container {
@@ -41,21 +61,37 @@ body {
 .project-container {
   position: relative;
   display: flex;
-  background-color: $accent-gray;
-  height: 70vh;
+  flex-direction: column;
+  background-color: $project-container-color;
+  height: auto;
   width: 80vw;
   padding: 5vh 5vw 5vh 5vw;
-  @media screen and (max-width: 800px) {
-    display: inline;
-    padding: 0 0 0 0;
-  }
+  margin-bottom: 4vh;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 .screenshot-container {
-  background-color: $accent-red;
   margin-right: 4vw;
-  height: 42vh;
-  width: 38vw;
+  height: auto;
+  width: 100%;
+  background-color: rgba(0,0,0,0);
+}
+
+.screenshot-container img {
+  width: 100%;
+  margin-bottom: 2em;
+  position: relative;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.screenshot-container div {
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+     -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 .iphone {
@@ -65,12 +101,17 @@ body {
   width: 25vh;
   border-radius: 24px;
   margin: 0 auto;
-  box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.25);
+  box-shadow: 0 10px 10px 2px rgba(50, 50, 50, 0.75);
   @include transition(all .4s $ease-in-circ);
-
   position: absolute;
-  bottom: 5vh;
-  left: 33vw;
+  right: 2em;
+  top: 30vh;
+  @media screen and (max-width: 1000px) {
+    top: 20vh;
+  }
+  @media only screen and (max-device-width: 800px) {
+    display: none;
+  }
 }
 
 .iphone-inner {
@@ -131,6 +172,11 @@ body {
   border: solid 2px #3b3b3b;@include transition(all .4s $ease-in-circ);
 }
 
+.screen img {
+  width: 21.5vh;
+  height: 38vh;
+}
+
 .project-info {
   padding: 0 2vh 2vh 2vh;
   background-color: $color-snow;
@@ -165,7 +211,7 @@ footer {
 }
 
 .header {
-  background-color: rgba(255,255,255, .55);
+  background-color: $header-background-color;
   /* remove the gradient */
   background-image: none !important;
   box-shadow: 0 8px 6px -6px rgba(0,0,0, .2);
@@ -173,8 +219,8 @@ footer {
 }
 
 .header a {
-  color: $gray-header;
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  color: $header-text-color;
+  font-family: Roboto Slab, sans-serif;
   font-size: 1.1em;
   margin-top: -5px;
 }
@@ -208,19 +254,39 @@ ul.nav{
 .footer_icon {
   height: 18px;
   width: auto;
+  @media only screen and (max-device-width: 600px) {
+    height: 5rem;
+  }
 }
 
-.tech_icon {
-  height: 1em;
+.tech-icon-container {
+  display: flex;
+  font-size: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tech-icon {
+  margin-left: 5px;
+  height: 2em;
 }
 
 .statistics {
-  background-color: $accent-gray;
+  background-color: $statistics-background-color;
+  color: $statistics-color;
   width: 80vw;
   padding: 1vh 1vw 1vh 1vw; 
+  margin-bottom: 2em;
 }
 
 .introduction {
   height: 40vh;
   background-color: $accent-gray;
+}
+
+.navbar-brand {
+  line-height: normal;
+  @media only screen and (max-device-width: 600px) {
+    font-size: 3rem;
+  } 
 }

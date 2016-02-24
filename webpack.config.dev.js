@@ -48,8 +48,8 @@ module.exports = {
         loader: 'style!css!sass?includePaths[]=' + bourbon
       },
       { 
-        test: /\.(png|jpg|gif)$/,
-        loader: 'file?name=[name].[ext]'
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=8192'
       }
     ]
   }

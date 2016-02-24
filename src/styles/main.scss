@@ -21,7 +21,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-top: 65px;
   @media screen and (max-width: 800px) {
     font-size: 20px;
@@ -41,10 +41,12 @@ body {
 .project-container {
   position: relative;
   display: flex;
+  flex-direction: column;
   background-color: $accent-gray;
-  height: 70vh;
+  height: auto;
   width: 80vw;
   padding: 5vh 5vw 5vh 5vw;
+  margin-bottom: 4vh;
   @media screen and (max-width: 800px) {
     display: inline;
     padding: 0 0 0 0;
@@ -52,10 +54,9 @@ body {
 }
 
 .screenshot-container {
-  background-color: $accent-red;
   margin-right: 4vw;
-  height: 42vh;
-  width: 38vw;
+  height: auto;
+  width: 100%;
   @media screen and (max-width: 800px) {
     width: 100%;
     height: auto;
@@ -64,12 +65,14 @@ body {
 }
 
 .screenshot-container img {
-  width: 38vw;
+  width: 100%;
   @media screen and (max-width: 800px) {
     width: 90%;
     margin-left: auto;
     padding-right: auto;
   }
+  margin-bottom: 2em;
+  position: relative;
 }
 
 .iphone {
@@ -81,10 +84,10 @@ body {
   margin: 0 auto;
   box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.25);
   @include transition(all .4s $ease-in-circ);
-
   position: absolute;
-  bottom: 5vh;
-  left: 33vw;
+  right: 3em;
+  top: 20em;
+
 }
 
 .iphone-inner {
@@ -237,6 +240,7 @@ ul.nav{
   background-color: $accent-gray;
   width: 80vw;
   padding: 1vh 1vw 1vh 1vw; 
+  margin-bottom: 2em;
 }
 
 .introduction {

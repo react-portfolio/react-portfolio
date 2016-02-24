@@ -56,6 +56,20 @@ body {
   margin-right: 4vw;
   height: 42vh;
   width: 38vw;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    height: auto;
+    margin-right: 0px;
+  }
+}
+
+.screenshot-container img {
+  width: 38vw;
+  @media screen and (max-width: 800px) {
+    width: 90%;
+    margin-left: auto;
+    padding-right: auto;
+  }
 }
 
 .iphone {
@@ -129,6 +143,11 @@ body {
   overflow: hidden;
   @include linear-gradient(#1f1f1f, #141414);
   border: solid 2px #3b3b3b;@include transition(all .4s $ease-in-circ);
+}
+
+.screen img {
+  width: 21.5vh;
+  height: 38vh;
 }
 
 .project-info {

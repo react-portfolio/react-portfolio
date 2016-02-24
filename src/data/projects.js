@@ -1,10 +1,11 @@
-import project1Url from './screenshots/project1.gif';
+import project1Url from './screenshots/project1desktop.gif';
+// import project1Url from './screenshots/project1desktop.gif';
 
 const projectsData = {
   data: [
     {
-      desktop_image: project1Url,
-      mobile_image: 'image_url',
+      desktop_image: require('./screenshots/project1desktop.gif'),
+      mobile_image: require('./screenshots/project1mobile.png'),
       title: 'title',
       date: 'year',
       github_url: 'url',

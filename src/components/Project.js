@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Mobile from './projectComponents/Mobile.js';
 import TechStackItem from './projectComponents/TechStackItem';
-import githubIcon from '../data/logos/github-logo.png';
 
 export default class Project extends Component {
   constructor(props, context) {
@@ -35,7 +34,7 @@ export default class Project extends Component {
           <h3>Role</h3>
           <div>{project.role}</div>
           <h3>Tech Stack</h3>
-          <div>{techStackItems}</div>
+          <div className="tech-icon-container">{techStackItems}</div>
         </div>
       </div>
     );

@@ -7,13 +7,13 @@ export default class Header extends Component {
           <nav className="navbar navbar-fixed-top navbar-inner header">
 
             <div className="container">
-              <div className="navbar-brand pull-left">
+              <div className="navbar-brand">
                 <a href="#" > {personalInfo.name} </a>
               </div>
               <ul className="nav navbar-nav pull-right">
                 <li>
                   <a href={personalInfo.resume} className="nav-link">
-                    <span className="hide-when-small">Resume</span>
+                    <span>Resume</span>
                   </a>
                 </li>
                 <li>

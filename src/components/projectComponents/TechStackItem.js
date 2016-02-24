@@ -11,20 +11,22 @@ export default class TechStackItem extends Component {
 
     if (iconsData[tech]) {
       return (
-        <span>
+        <div>
           {tech}
-          <img className="tech_icon" src={iconsData[tech]} />
-        </span>
+          <img className="tech-icon" src={iconsData[tech]} />
+        </div>
       );
     } else {
       return (
-        <span>
+        <div>
           {tech}
-        </span>
+          <img className="tech-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Transparent_square.svg/2000px-Transparent_square.svg.png" />
+        </div>
       );
     }
   }
 }
 
 TechStackItem.propTypes = {
+  tech: PropTypes.string.isRequired
 };

@@ -23,9 +23,22 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
   margin-top: 65px;
-  @media screen and (max-width: 800px) {
-    font-size: 20px;
+  @media only screen and (max-device-width: 600px) {
+    font-size: 3rem;
   }
+}
+
+h2 {
+  @media only screen and (max-device-width: 600px) {
+    font-size: 5rem;
+  } 
+}
+
+
+h3 {
+  @media only screen and (max-device-width: 600px) {
+    font-size: 4rem;
+  } 
 }
 
 .main-app-container {
@@ -47,30 +60,16 @@ body {
   width: 80vw;
   padding: 5vh 5vw 5vh 5vw;
   margin-bottom: 4vh;
-  @media screen and (max-width: 800px) {
-    display: inline;
-    padding: 0 0 0 0;
-  }
 }
 
 .screenshot-container {
   margin-right: 4vw;
   height: auto;
   width: 100%;
-  @media screen and (max-width: 800px) {
-    width: 100%;
-    height: auto;
-    margin-right: 0px;
-  }
 }
 
 .screenshot-container img {
   width: 100%;
-  @media screen and (max-width: 800px) {
-    width: 90%;
-    margin-left: auto;
-    padding-right: auto;
-  }
   margin-bottom: 2em;
   position: relative;
 }
@@ -85,9 +84,14 @@ body {
   box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.25);
   @include transition(all .4s $ease-in-circ);
   position: absolute;
-  right: 3em;
-  top: 20em;
-
+  right: 2em;
+  top: 30vh;
+  @media screen and (max-width: 1000px) {
+    top: 20vh;
+  }
+  @media only screen and (max-device-width: 600px) {
+    display: none;
+  }
 }
 
 .iphone-inner {
@@ -230,10 +234,23 @@ ul.nav{
 .footer_icon {
   height: 18px;
   width: auto;
+  @media only screen and (max-device-width: 600px) {
+    height: 5rem;
+  }
 }
 
-.tech_icon {
-  height: 1em;
+.tech-icon-container {
+  display: flex;
+  font-size: 2rem;
+}
+
+.tech-icon-container div {
+  margin-right: 5rem;
+}
+
+.tech-icon {
+  margin-left: 5px;
+  height: 2em;
 }
 
 .statistics {
@@ -246,4 +263,10 @@ ul.nav{
 .introduction {
   height: 40vh;
   background-color: $accent-gray;
+}
+
+.navbar-brand {
+  @media only screen and (max-device-width: 600px) {
+    font-size: 3rem;
+  } 
 }

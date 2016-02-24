@@ -5,8 +5,6 @@ import * as BenchmarkActions from '../actions/BenchmarkActions';
 import Project from '../components/Project';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import Statistics from '../components/Statistics';
-import Introduction from '../components/Introduction';
 import { Perf } from '../index';
 
 /**
@@ -39,7 +37,6 @@ export default class App extends Component {
     return (
       <div className="main-app-container">
         <Header personalInfo={personalInfo} />
-        <Statistics benchmark={benchmark} />
         <div className="main-app-nav">Selected Projects</div>
         {/* notice that we then pass those unpacked props into the Counter component */}
           {projectEntries}

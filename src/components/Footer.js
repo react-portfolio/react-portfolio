@@ -6,7 +6,7 @@ export default class Footer extends Component {
     return (
       <footer>
         <span id="footer-text-wrap">
-        Built in SF <img className="footer_icon" src="http://i.imgur.com/RwtepDc.png"/> by {personalInfo.name}.
+        Built by {personalInfo.name}.
         </span>
       </footer>
     );

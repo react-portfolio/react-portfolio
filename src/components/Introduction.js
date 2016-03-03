@@ -5,12 +5,12 @@ export default class Introduction extends Component {
     const { personalInfo } = this.props;
     return (
       <div className="introduction">
-        <h1>I'm a software engineer who's just as excited about algorithms, data structures, and databases as I am about the latest technologies in modern web development.</h1>
+        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
       </div>
     );
   }
 }
 
 Introduction.propTypes = {
-  // personalInfo: PropTypes.personalInfo.isRequired
+  // personalInfo: PropTypes.object.isRequired
 };

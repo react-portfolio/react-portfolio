@@ -10,8 +10,8 @@ This portfolio template includes:
 * Responsive CSS components for web and mobile
 
 See below for some examples of how this template can be customized:
-*[Example 1 = Jay Chen](http://jchen85.github.io/)
-*[Example 2 - Rachel RoseFigura](http://www.rachelrosefigura.com)
+* [Example 1 = Jay Chen](http://jchen85.github.io/)
+* [Example 2 - Rachel RoseFigura](http://www.rachelrosefigura.com)
 
 Some technologies utilized here include:
 * React

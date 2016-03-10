@@ -41,3 +41,6 @@ This will start webpack-dev-server and enable hot reloading. Then  visit:
 http://localhost:3000
 ```
 
+## Production
+
+Run `npm run build` and Webpack will bundle your scripts and output to `/dist/`. The app, however, will be looking for its dependecies in `/static/`. You can rename `/dist/` to `/static/` and open `index.html` to view your portfolio. [Click here](https://github.com/jchen85/jchen85.github.io) for an example of an easy deployment on Github Pages.

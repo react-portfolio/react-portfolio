@@ -10,7 +10,7 @@ This portfolio template includes:
 * Responsive CSS components for web and mobile
 * Infinite scroll one-page design
 
-###Template Portfolio (Desktop)
+### Template Portfolio (Desktop)
 ![](http://i.imgur.com/h4Lk04s.png)
 
 See below for some examples of how this template can be customized:
